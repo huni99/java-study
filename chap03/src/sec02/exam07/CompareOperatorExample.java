@@ -1,5 +1,8 @@
 package sec02.exam07;
 
+import java.util.Scanner;
+
+
 public class CompareOperatorExample {
 
 	public static void main(String[] args) {
@@ -25,8 +28,12 @@ public class CompareOperatorExample {
 //		[입력]   [출력]
 //		 1 2 => false
 //		10 5 => true
+		Scanner scanner = new Scanner(System.in);
+		int num3 = scanner.nextInt();		
+		int num4 = scanner.nextInt();		
 		
-		
+		boolean result = num3>=num4;
+		System.out.println(result);
 	}
 
 }
