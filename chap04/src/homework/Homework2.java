@@ -11,7 +11,14 @@ public class Homework2 {
 		
 		if(num1<=0) {
 			System.out.println("해당하는 계절이 없다");
-			
+	
+			//early return패턴
+			//에러나 예외 조건을 먼저 검사하고 처리한 다음, 성공 케이스는 마지막에 처리하는 구조
+			//장점1. 코드 가독성이 좋아짐 2. 코드으 ㅣ중첩을 줄일 수 있다.
+//			if(num1<=0||num1>12) {
+//				System.out.println("해당하는 계절이 없다");
+//				return;
+//			}
 		}else if(num1<=3) {
 			System.out.println("봄");
 			
