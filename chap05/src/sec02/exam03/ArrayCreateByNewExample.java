@@ -17,5 +17,39 @@ public class ArrayCreateByNewExample {
 		for(int i= 0 ; i< arr1.length; i++) {
 			System.out.println("arr1["+i+"]:"+arr1[i]);
 		}
+		
+		System.out.println();
+		//double
+		double[] arr2 = new double[3];
+		
+		for(int i= 0 ; i< arr2.length; i++) {
+			System.out.println("arr1["+i+"]:"+arr2[i]);
+		}
+		
+		System.out.println();
+		
+		
+		//String
+		String[] arr3 = new String[3];
+		for(int i= 0 ; i< arr3.length; i++) {
+			System.out.println("arr1["+i+"]:"+arr3[i]);
+		}
+		
+		//정리:
+		//배열은 값 목록을 이용해서 생성 또는 길이를 지정하여 배열 객체를 생성
+		//배열은 처음 생성 시 길이가 정해지면 변경 불가
+		//배열 생성 시 지정된 타입으로만 저장 가능
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 }
