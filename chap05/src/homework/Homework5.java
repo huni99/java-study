@@ -63,13 +63,7 @@ public class Homework5 {
 					result[0]++;
 					System.out.println("비겼습니다.");
 				}
-				
-			}
-				
-				
-				
-			
-			
+			}															
 		}
 	}
 }
