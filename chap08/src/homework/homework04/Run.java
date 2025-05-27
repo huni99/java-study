@@ -5,10 +5,9 @@ public class Run {
 		SmartPhone[] smt = new SmartPhone[2];
 		smt[0]=new GalaxyS24();
 		smt[1]= new Iphone15();
-		GalaxyS24 tt= new GalaxyS24();
-		tt.name="dd";
 		for(SmartPhone sm : smt) {
-			sm.printMaker();
+			sm.getName();System.out.print("는 ");
+			sm.printMaker();System.out.println("에서 만들어졌다");
 			sm.makeCall();
 			sm.takeCall();
 			sm.charge();

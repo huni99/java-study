@@ -1,7 +1,6 @@
 package homework.homework04;
 
 public class Iphone15 extends SmartPhone {
-	public String name = "Iphone15";
 	@Override
 	public void charge() {
 		System.out.println("고속충전 ");
@@ -25,6 +24,11 @@ public class Iphone15 extends SmartPhone {
 	@Override
 	public void printMaker() {		
 		System.out.print("애플");
+	}
+	@Override
+	public void getName() {
+		System.out.print("Iphone15");
+		
 	}
 
 }

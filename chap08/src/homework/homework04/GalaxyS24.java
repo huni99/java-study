@@ -1,7 +1,6 @@
 package homework.homework04;
 
 public class GalaxyS24 extends SmartPhone {
-	public String name ="dd";
 	GalaxyS24(){
 	
 	}
@@ -27,7 +26,12 @@ public class GalaxyS24 extends SmartPhone {
 	}
 	@Override
 	public void printMaker() {		
-		System.out.println("삼성");
+		System.out.print("삼성");
+	}
+	@Override
+	public void getName() {
+		System.out.print("GalaxyS24");
+		
 	}
 	
 	
