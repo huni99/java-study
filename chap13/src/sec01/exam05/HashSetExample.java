@@ -3,6 +3,7 @@ package sec01.exam05;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -19,18 +20,51 @@ public class HashSetExample {
 		//이외에도 동등 객체로 판단하는 많은 메소드들이 제대로 동작하려면 재정의 필수임
 		
 		
-		
-		//요소 정렬
-		//HashSet 자체는 정렬 기능이 없는 컬렉션이기 때문에
-		//정렬을 하려면 다른 컬렉션으로 변환한 뒤에 정렬
-		//List로 변환 후 Collections.sort() 사용
-		
 		System.out.println("총 객체수: "+ set.size());
 		for(Member member : set) {
 			System.out.println("\t"+member);
 		}
-		List<Member> list = new ArrayList<Member>(set);
-		Collections.sort(list);
-		System.out.println(list.get(0).compareTo(list.get(1)));
+		
+		//요소 정렬
+		// Integer, String과 같은 경우 Collections.sort() 바로 사용 가능
+		// Member처럼 사용자 정의 객체끼리 비교할 경우 비교 불가능
+		// 정렬 기준으로 어떤 값을 사용할지 별도로 구현해야 함
+		// Member 클래스가 Comparable을 구현
+		
+		Set<Member> members = new HashSet<Member>();
+		members.add(new Member("김재현", 30));
+		members.add(new Member("이수진", 25));
+		members.add(new Member("박민수", 40));
+		
+		//Set - > List 변환
+		List<Member> memberList = new ArrayList<Member>(members);
+		
+		//정렬
+		Collections.sort(memberList);
+		for(Member m : memberList) {
+			System.out.println(m.getName()+" - "+m.getAge());
+		}
+		System.out.println();
+		//다시 Set으로 (순서 유지하려면 linkedHashSet을 사용)
+		
+		Set<Member> linkedHashSet = new LinkedHashSet<Member>(memberList);
+		for(Member m : linkedHashSet) {
+			System.out.println(m.getName()+" - "+m.getAge());
+		}
+		
+		//ArrayList의 요소에서 중복 제거하기
+		List<Member> memList = new ArrayList<Member>();
+		memList.add(new Member("김재현", 30));
+		memList.add(new Member("이수진", 25));
+		memList.add(new Member("박민수", 40));
+		memList.add(new Member("김재현", 30));//중복
+		memList.add(new Member("이수진", 25));//중복
+		System.out.println();
+		Set<Member> memSet = new HashSet<Member>(memList);
+		for(Member m : memSet) {
+			System.out.println(m.getName()+" - "+m.getAge());
+		}
+
+		
 	}
 }
