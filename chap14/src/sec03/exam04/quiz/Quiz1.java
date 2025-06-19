@@ -21,7 +21,7 @@ public class Quiz1 {
 		String test = uuid.toString().replace("-", "");
 		File file = new File("C:/test/sub");
 //		File file = new File("C:/test/sub/"+test);
-//		file.mkdirs(); 이렇게도 가능
+//		file.mkdirs(); 이렇게도 가능하다
 		
 		
 		file.mkdirs();
